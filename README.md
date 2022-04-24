@@ -5,6 +5,7 @@
 <br/>
   
   <div align="center">
+    <img src="https://i.pinimg.com/originals/38/42/23/384223a426361f98e7cfcf30f2272806.gif" alt="pingpong"/>
   
   ###### _혹시... 탁구 좋아하세요?  ~~아님말고~~ _
 
