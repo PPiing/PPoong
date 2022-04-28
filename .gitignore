@@ -99,4 +99,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+backend
+frontend
+upload
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,visualstudiocode,vim

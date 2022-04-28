@@ -1,0 +1,18 @@
+version: '3'
+services:
+  gateway:
+    container_name: nginx_gateway
+    image: "nginx:latest"
+    ports:
+      - '80:80'
+    volumes:
+      - ./gateway/conf.d/:/etc/nginx/conf.d/
+      - ./upload/upload/:/external/upload/
+  backend:
+    container_name: backend
+    build: ./backend
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    ports:
+      - '4173:4173'
