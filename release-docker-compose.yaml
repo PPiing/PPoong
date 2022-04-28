@@ -14,5 +14,13 @@ services:
   frontend:
     container_name: frontend
     build: ./frontend
+  postgres:
+    #FIXME 추후에 환경변수를 받아 설정하도록 변경해야 함
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: user
+      POSTGRES_DB: db
     ports:
-      - '4173:4173'
+      - '5432:5432'
