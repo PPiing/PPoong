@@ -7,7 +7,7 @@ services:
       - '80:80'
     volumes:
       - ./gateway/dev.conf.d/:/etc/nginx/conf.d/
-      - ./static/static/:/external/static/
+      - ../upload/upload/:/external/upload/
   postgres:
     #FIXME 추후에 환경변수를 받아 설정하도록 변경해야 함
     container_name: postgres

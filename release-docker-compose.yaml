@@ -7,13 +7,13 @@ services:
       - '80:80'
     volumes:
       - ./gateway/conf.d/:/etc/nginx/conf.d/
-      - ./upload/upload/:/external/upload/
+      - ../upload/upload/:/external/upload/
   backend:
     container_name: backend
-    build: ./backend
+    build: ../backend
   frontend:
     container_name: frontend
-    build: ./frontend
+    build: ../frontend
   postgres:
     #FIXME 추후에 환경변수를 받아 설정하도록 변경해야 함
     container_name: postgres
@@ -22,5 +22,3 @@ services:
       POSTGRES_PASSWORD: example
       POSTGRES_USER: user
       POSTGRES_DB: db
-    ports:
-      - '5432:5432'

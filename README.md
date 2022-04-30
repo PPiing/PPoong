@@ -30,13 +30,26 @@
 
 
 ## 📝 How To Use
-배포 모드일 때엔 release-docker-compose.yaml를 실행하며 개발 모드일 때엔 dev-docker-compose.yaml 를 실행합니다.
 실행 전, 루트 경로에 다음 저장소를 클론받아야 합니다.
+ - https://github.com/PPiing/PPoong.git
  - https://github.com/PPiing/backend.git
  - https://github.com/PPiing/frontend.git
  - https://github.com/PPiing/upload.git
 
-개발 모드일 때에는 ./backend, ./frontend, ./upload 내에 존재하는 프로젝트를 별도로 실행하여야 합니다.
+그러면 아래와 같은 구조가 됩니다.
+```
+root
+├── PPoong
+│   ├── release-docker-compose.yaml
+│   └── dev-docker-compose.yaml
+├── backend
+├── frontend
+└── upload
+```
+
+배포 모드일 때엔 release-docker-compose.yaml를 실행하며 개발 모드일 때엔 dev-docker-compose.yaml 를 실행합니다.
+
+개발 모드일 때에는 root/backend, root/frontend, root/upload 내에 존재하는 프로젝트를 별도로 실행하여야 합니다.
 <br/>
 
 <br/>
