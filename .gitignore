@@ -99,6 +99,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# ppong .env files
+.env
+
+# ppong folders
 backend
 frontend
 upload
