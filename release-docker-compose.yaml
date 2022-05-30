@@ -8,6 +8,15 @@ services:
   backend:
     container_name: backend
     build: ../backend
+    environment:
+      DATABASE_HOST: postgres
+      DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
+      DATABASE_USERNAME: ${POSTGRES_USER}
+      DATABASE_NAME: ${POSTGRES_DB}
+      AUTH_SECRET: ${AUTH_SECRET}
+      AUTH_CLIENTID: ${AUTH_CLIENTID}
+      AUTH_CLIENTSECRET: ${AUTH_CLIENTSECRET}
+      AUTH_CALLBACKURL: ${AUTH_CALLBACKURL}
   frontend:
     container_name: frontend
     build: ../frontend
@@ -16,6 +25,6 @@ services:
     container_name: postgres
     image: postgres:latest
     environment:
-      POSTGRES_PASSWORD: example
-      POSTGRES_USER: user
-      POSTGRES_DB: db
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
