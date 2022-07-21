@@ -264,7 +264,7 @@ INSERT INTO achiv VALUES (1, 'Score50', './achiv1.jpg', 50);
 INSERT INTO achiv VALUES (2, 'Score100', './achiv2.jpg', 100);
 INSERT INTO achiv VALUES (3, 'Score150', './achiv3.jpg', 150);
 
-INSERT INTO "user" ("userSeq", "userId", "nickName", "email", "secAuthStatus", "avatarImgUri", "status", "deleteStatus", "createdAt") VALUES
-(1,	76295,	'수퍼꽃미남낌',	'kkim@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-20 11:24:58.14967'),
-(2,	81304,	'멋쟁이형요',	'hyungyyo@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-20 23:11:40.43843'),
-(3,	76317,	'joopark',	'joopark@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-21 05:29:21.827393');
+INSERT INTO "user" ( "userId", "nickName", "email", "secAuthStatus", "avatarImgUri", "status", "deleteStatus", "createdAt") VALUES
+(76295,	'수퍼꽃미남낌',	'kkim@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-20 11:24:58.14967'),
+(81304,	'멋쟁이형요',	'hyungyyo@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-20 23:11:40.43843'),
+(76317,	'joopark',	'joopark@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-21 05:29:21.827393');
