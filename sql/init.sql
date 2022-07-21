@@ -42,7 +42,7 @@ create table "user"
         constraint "UQ_e12875dfb3b1d92d7d7c5377e22"
             unique,
     "secAuthStatus" boolean   default false                                   not null,
-    "avatarImgUri"  varchar   default 'DefaultProfile.jpg'::character varying not null,
+    "avatarImgUri"  varchar   default '/api/upload/DefaultProfile.jpg'::character varying not null,
     status          varchar   default 'USST10'::character varying             not null,
     "deleteStatus"  boolean   default false                                   not null,
     "createdAt"     timestamp default now()                                   not null
@@ -263,3 +263,8 @@ alter table "query-result-cache"
 INSERT INTO achiv VALUES (1, 'Score50', './achiv1.jpg', 50);
 INSERT INTO achiv VALUES (2, 'Score100', './achiv2.jpg', 100);
 INSERT INTO achiv VALUES (3, 'Score150', './achiv3.jpg', 150);
+
+INSERT INTO "user" ("userSeq", "userId", "nickName", "email", "secAuthStatus", "avatarImgUri", "status", "deleteStatus", "createdAt") VALUES
+(1,	76295,	'수퍼꽃미남낌',	'kkim@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-20 11:24:58.14967'),
+(2,	81304,	'멋쟁이형요',	'hyungyyo@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-20 23:11:40.43843'),
+(3,	76317,	'joopark',	'joopark@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-21 05:29:21.827393');
