@@ -268,3 +268,39 @@ INSERT INTO "user" ( "userId", "nickName", "email", "secAuthStatus", "avatarImgU
 (76295,	'수퍼꽃미남낌',	'kkim@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-20 11:24:58.14967'),
 (81304,	'멋쟁이형요',	'hyungyyo@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-20 23:11:40.43843'),
 (76317,	'joopark',	'joopark@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.jpg',	'USST10',	'0',	'2022-07-21 05:29:21.827393');
+
+INSERT INTO "chat" ("chatType", "chatName", "password", "isDirected") VALUES
+('CHTP20',	'푸주홍의 등산클럽',	'',	'0'),
+('CHTP30',	'장이수의 도박클럽',	'$2b$10$gnY2ITzIrJKgw2HxH5GETOKO6ICbRLCvge1e3xta1UM1CceZCz1Ia',	'0'),
+('CHTP40',	'장첸의 마라롱샤클럽',	'',	'0'),
+('CHTP20',	'크립스 갱스터들',	'',	'0'),
+('CHTP20',	'스킴 80kg 만들기 목표방',	'',	'0');
+
+INSERT INTO "message" ("message", "createdAt", "chatSeq", "userSeq") VALUES
+('안녕하세요 형요님, 주팍님',	now() + INTERVAL '1 MINUTE',	1,	1),
+('네 안녕하세요',	now() + INTERVAL '2 MINUTE',	1,	2),
+('게임하러 왔으면 곱게 놀아야지',	now() + INTERVAL '3 MINUTE',	2,	1),
+('뭐이라니? 정신나갔니?',	now() + INTERVAL '4 MINUTE',	2,	3),
+('어. 정신나갔다. 맞제?',	now() + INTERVAL '5 MINUTE',	2,	1),
+('시끄럽다',	now() + INTERVAL '6 MINUTE',	2,	3),
+('죄송합니다 형님',	now() + INTERVAL '7 MINUTE',	2,	1),
+('니들 뭐이야',	now() + INTERVAL '8 MINUTE',	2,	3),
+('마라롱샤 한그릇 5천원~',	now() + INTERVAL '9 MINUTE',	3,	1),
+('Much Crip love',	now() + INTERVAL '10 MINUTE',	4,	1),
+('On a blue day like this',	now() + INTERVAL '11 MINUTE',	4,	1),
+('Packin a .44',	now() + INTERVAL '12 MINUTE',	4,	1),
+('Roll in a Crip 6',	now() + INTERVAL '13 MINUTE',	4,	1),
+('They call me Sin Loc',	now() + INTERVAL '14 MINUTE',	4,	1),
+('Yes, the G that aint no joke',	now() + INTERVAL '15 MINUTE',	4,	1),
+('스킴 80kg 만들기 정말 가능할까요?',	now() + INTERVAL '16 MINUTE',	5,	2),
+('아이 그럼요~ 지금처럼만 하면 두달이면 가능하죠~',	now() + INTERVAL '17 MINUTE',	5,	1);
+
+INSERT INTO "chat_participant" ("userSeq", "chatSeq", "partcAuth", "enteredAt", "leavedAt") VALUES
+(1,	1,	'CPAU30',	now(),	NULL),
+(2,	1,	'CPAU20',	now(),	NULL),
+(3,	1,	'CPAU10',	now(),	NULL),
+(1,	2,	'CPAU30',	now(),	NULL),
+(3,	2,	'CPAU10',	now(),	NULL),
+(1,	3,	'CPAU30',	now(),	NULL),
+(1,	4,	'CPAU30',	now(),	NULL),
+(2,	4,	'CPAU10',	now(),	NULL);
