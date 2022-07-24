@@ -106,7 +106,7 @@ create table chat_event
     "toWho"          integer
         constraint "FK_f3fb8fd9674b602dfbd7619595c"
             references chat_participant,
-    "ChatSeq"        integer
+    "chatSeq"        integer
         constraint "FK_2be9c80149696d940259e764781"
             references chat
 );
