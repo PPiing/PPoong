@@ -297,11 +297,15 @@ INSERT INTO "message" ("message", "createdAt", "chatSeq", "userSeq") VALUES
 ('아이 그럼요~ 지금처럼만 하면 두달이면 가능하죠~',	now() + INTERVAL '17 MINUTE',	5,	1);
 
 INSERT INTO "chat_participant" ("userSeq", "chatSeq", "partcAuth", "enteredAt", "leavedAt") VALUES
-(1,	1,	'CPAU30',	now(),	NULL),
-(2,	1,	'CPAU20',	now(),	NULL),
-(3,	1,	'CPAU10',	now(),	NULL),
-(1,	2,	'CPAU30',	now(),	NULL),
-(3,	2,	'CPAU10',	now(),	NULL),
-(1,	3,	'CPAU30',	now(),	NULL),
-(1,	4,	'CPAU30',	now(),	NULL),
-(2,	4,	'CPAU10',	now(),	NULL);
+(1,	1, 'CPAU30', now(),	NULL),
+(2,	1, 'CPAU20', now(),	NULL),
+(3,	1, 'CPAU10', now(),	NULL),
+(1,	2, 'CPAU30', now(),	NULL),
+(3,	2, 'CPAU10', now(),	NULL),
+(1,	3, 'CPAU30', now(),	NULL),
+(1,	4, 'CPAU30', now(),	NULL),
+(2,	4, 'CPAU10', now(),	NULL);
+
+-- INSERT INTO "friends"("isBlocked", "status", "followerSeq", "followeeSeq") VALUES
+-- (false, 'FRST10', 1, 5),
+-- (false, 'FRST10', 5, 1);
