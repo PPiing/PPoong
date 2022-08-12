@@ -161,7 +161,7 @@ create table game_log
     "redUserSeq"        integer                 not null,
     "blueUserName"      varchar                 not null,
     "redUserName"       varchar                 not null,
-    "winnerSeq"         integer                 not null,
+    "winnerSeq"         integer                 null,
     "blueScore"         integer   default 0     not null,
     "redScore"          integer   default 0     not null,
     "paddleSize"        integer                 not null,
