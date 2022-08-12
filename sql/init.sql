@@ -156,23 +156,26 @@ create table game_log
         constraint "PK_9c05647fe50dfdc35337f1e394c"
             primary key,
     "roomId"            varchar                 not null,
-    "gameType"          varchar                 not null,
-    "topUserName"       varchar                 not null,
-    "btmUserName"       varchar                 not null,
-    "topSideScore"      integer   default 0     not null,
-    "btmSideScore"      integer   default 0     not null,
-    option1             varchar                 not null,
-    option2             varchar                 not null,
-    option3             varchar                 not null,
+    "isRankGame"        boolean                 not null,
+    "blueUserSeq"       integer                 not null,
+    "redUserSeq"        integer                 not null,
+    "blueUserName"      varchar                 not null,
+    "redUserName"       varchar                 not null,
+    "winnerSeq"         integer                 not null,
+    "blueScore"         integer   default 0     not null,
+    "redScore"          integer   default 0     not null,
+    "paddleSize"        integer                 not null,
+    "ballSpeed"         integer                 not null,
+    "matchScore"        integer                 not null,
     "createdAt"         timestamp default now() not null,
     "updatedAt"         timestamp default now() not null,
-    "topUserSeqUserSeq" integer
-        constraint "FK_6583a2bb12e378cf30c42662360"
+    "blueUserSeqUserSeq" integer
+        constraint "FK_1c430a90644d54f160d4f0799e9"
             references "user",
-    "btmUserSeqUserSeq" integer
-        constraint "FK_fbd4306b511d55485ffc8ca48ca"
+    "redUserSeqUserSeq"  integer
+        constraint "FK_57749872aa6821e3437719a7fa1"
             references "user",
-    "winnerSeqUserSeq"  integer
+    "winnerSeqUserSeq"   integer
         constraint "FK_68c0bfc674ca97e446bcb4b55c1"
             references "user"
 );
