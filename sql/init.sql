@@ -43,7 +43,7 @@ create table "user"
             unique,
     "secAuthStatus" boolean   default false                                   not null,
     "avatarImgUri"  varchar   default '/api/upload/DefaultProfile.png'::character varying not null,
-    status          varchar   default 'USST10'::character varying             not null,
+    status          varchar   default 'USST20'::character varying             not null,
     "deleteStatus"  boolean   default false                                   not null,
     "createdAt"     timestamp default now()                                   not null
 );
@@ -268,10 +268,10 @@ INSERT INTO achiv VALUES (2, 'Score100', './achiv2.jpg', 100);
 INSERT INTO achiv VALUES (3, 'Score150', './achiv3.jpg', 150);
 
 INSERT INTO "user" ( "userId", "nickName", "email", "secAuthStatus", "avatarImgUri", "status", "deleteStatus", "createdAt") VALUES
-(75023,	'hybae',	'hybae@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.png',	'USST10',	'0',	'2022-07-21 05:29:21.827393'),
-(76295,	'kkim',	'kkim@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.png',	'USST10',	'0',	'2022-07-20 11:24:58.14967'),
-(81304,	'hyungyyo',	'hyungyyo@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.png',	'USST10',	'0',	'2022-07-20 23:11:40.43843'),
-(76317,	'joopark',	'joopark@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.png',	'USST10',	'0',	'2022-07-21 05:29:21.827393');
+(75023,	'hybae',	'hybae@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.png',	'USST20',	'0',	'2022-07-21 05:29:21.827393'),
+(76295,	'kkim',	'kkim@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.png',	'USST20',	'0',	'2022-07-20 11:24:58.14967'),
+(81304,	'hyungyyo',	'hyungyyo@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.png',	'USST20',	'0',	'2022-07-20 23:11:40.43843'),
+(76317,	'joopark',	'joopark@student.42seoul.kr',	'0',	'/api/upload/DefaultProfile.png',	'USST20',	'0',	'2022-07-21 05:29:21.827393');
 
 INSERT INTO "chat" ("chatType", "chatName", "password", "isDirected") VALUES
 ('CHTP20',	'푸주홍의 등산클럽',	'',	'0'),
